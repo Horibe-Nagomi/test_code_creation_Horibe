@@ -56,7 +56,7 @@ public class Case02 {
 		webDriver.findElement(By.id("loginId")).sendKeys("dummy_user");
 		webDriver.findElement(By.id("password")).sendKeys("pass0722");
 
-		// 2. ログインボタンを押下（@type='submit' に修正）
+		// 2. ログインボタンを押下
 		webDriver.findElement(By.xpath("//input[@type='submit']")).click();
 
 		// 3. ログイン認証失敗画面であることの検証
