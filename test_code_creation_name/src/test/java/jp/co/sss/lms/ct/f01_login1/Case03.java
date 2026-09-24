@@ -40,7 +40,7 @@ public class Case03 {
 		// 1. トップページへアクセス
 		goTo("http://localhost:8080/lms");
 
-		// 2. ログイン画面であることの検証
+		// 2. ログイン画面であることの検証ｓ
 		assertEquals("ログイン | LMS", webDriver.getTitle());
 
 		// 3. エビデンス取得
