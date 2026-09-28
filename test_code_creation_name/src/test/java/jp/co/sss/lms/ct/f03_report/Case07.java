@@ -53,8 +53,8 @@ public class Case07 {
 	@DisplayName("テスト02 初回ログイン済みの受講生ユーザーでログイン")
 	void test02() {
 		// 1. ログインIDとパスワードを入力
-		webDriver.findElement(By.id("loginId")).sendKeys("StudentAA03");
-		webDriver.findElement(By.id("password")).sendKeys("Nagomi0715");
+		webDriver.findElement(By.id("loginId")).sendKeys("StudentAA04");
+		webDriver.findElement(By.id("password")).sendKeys("Nagomi0722");
 
 		// 2. ログインボタンを押下
 		webDriver.findElement(By.xpath("//input[@value='ログイン']")).click();
