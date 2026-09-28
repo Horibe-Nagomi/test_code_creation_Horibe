@@ -61,7 +61,7 @@ public class Case08 {
 	@Order(3)
 	@DisplayName("テスト03 提出済の研修日の「詳細」ボタンを押下しセクション詳細画面に遷移")
 	void test03() {
-		// 7月8日の行の「詳細」ボタンを押下（見つからない場合は1番目の詳細）
+		// 7月8日の行の「詳細」ボタンを押下
 		try {
 			webDriver.findElement(By.xpath(
 					"//tr[contains(., '7月8日') or contains(., '7/8')]//input[@value='詳細'] | //tr[contains(., '7月8日') or contains(., '7/8')]//a[contains(text(),'詳細')]"))
@@ -98,7 +98,6 @@ public class Case08 {
 		webDriver.findElement(By.tagName("textarea")).clear();
 		webDriver.findElement(By.tagName("textarea")).sendKeys("修正：今週の研修内容についての理解を深めた。");
 		webDriver.findElement(By.xpath("//input[@value='提出する'] | //button[contains(text(), '提出する')]")).click();
-		Thread.sleep(1000);
 
 		String actualText = webDriver.findElement(By.tagName("body")).getText();
 		assertTrue(actualText.contains("本日のレポート") || actualText.contains("確認"));
